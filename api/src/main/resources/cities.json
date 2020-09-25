@@ -1,0 +1,141 @@
+{ 
+    "data": [
+        {
+            "city": "Charlotte",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Cary",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Raleigh",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Durham",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Wilmington",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Jacksonville",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Winston Salem",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Georgiastonia",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Chapel Hill",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Apex",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Wake Forest",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Kannapolis",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Richmond",
+            "state": "Virginia"
+        },
+        {
+            "city": "Fort Mill",
+            "state": "South Carolina"
+        },
+        {
+            "city": "Charleston",
+            "state": "South Carolina"
+        },
+        {
+            "city": "Atlanta",
+            "state": "Georgia"
+        },
+        {
+            "city": "SaVirginiannah",
+            "state": "Georgia"
+        },
+        {
+            "city": "Richmond",
+            "state": "Virginia"
+        },
+        {
+            "city": "Philadelphia",
+            "state": "Pennsylvania"
+        },
+        {
+            "city": "New York",
+            "state": "New York"
+        },
+        {
+            "city": "Buffalo",
+            "state": "New York"
+        },
+        {
+            "city": "Albany",
+            "state": "New York"
+        },
+        {
+            "city": "Athens",
+            "state": "Georgia"
+        },
+        {
+            "city": "Columbia",
+            "state": "South Carolina"
+        },
+        {
+            "city": "Nashville",
+            "state": "TN"
+        },
+        {
+            "city": "Chantilly",
+            "state": "Virginia"
+        },
+        {
+            "city": "Boone",
+            "state": "North Carolina"
+        },
+        {
+            "city": "Boston",
+            "state": "Massachusetts"
+        },
+        {
+            "city": "Baltimore",
+            "state": "Maryland"
+        },
+        {
+            "city": "Jacksonville",
+            "state": "Florida"
+        },
+        {
+            "city": "Miami",
+            "state": "Florida"
+        },
+        {
+            "city": "Tampa",
+            "state": "Florida"
+        },
+        {
+            "city": "Fort Lauderdale",
+            "state": "Florida"
+        },
+        {
+            "city": "Tallahassee",
+            "state": "Florida"
+        }
+            
+    ]   
+}
