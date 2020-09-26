@@ -27,4 +27,6 @@ public interface PersonProjection {
 
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     LocalDate getMemberSince();
+
+    boolean isWelcomeCompletecomeComplete();
 }

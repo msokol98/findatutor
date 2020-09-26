@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 public class FindatutorApplication implements CommandLineRunner {
@@ -24,13 +26,12 @@ public class FindatutorApplication implements CommandLineRunner {
 
 	@Autowired
 	private ReviewRepository reviewRepo;
-
 	public static void main(String[] args) {
 		SpringApplication.run(FindatutorApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		//new FakeDataCreator().run(personRepo, tutorRepo, reviewRepo, locationRepo, subjectRepo);
+		//new FakeDataCreator().run(personRepo, tutorRepo, reviewRepo, locationRepo, subjectRepo, passwordEncoder);
 	}
 }

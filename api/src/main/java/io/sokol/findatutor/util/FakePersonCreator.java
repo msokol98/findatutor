@@ -8,6 +8,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -16,7 +17,7 @@ import java.util.*;
 
 public class FakePersonCreator {
 
-    public void run(PersonRepository personRepo, LocationRepository locationRepo, SubjectRepository subjectRepo) {
+    public void run(PersonRepository personRepo, LocationRepository locationRepo, SubjectRepository subjectRepo, PasswordEncoder passwordEncoder) {
         List<Person> persons = parseJSON();
         persons.forEach(person -> {
             person.setLocation(locationRepo.getRandomLocation());
@@ -24,6 +25,8 @@ public class FakePersonCreator {
             if(person.getClass() == Tutor.class) {
                 setSubjects((Tutor) person, subjectRepo);
             }
+
+            person.setPassword(passwordEncoder.encode(person.getPassword()));
 
             personRepo.save(person);
         });

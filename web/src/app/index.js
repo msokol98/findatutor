@@ -8,6 +8,7 @@ import Home from 'views/landing';
 import Tutors from 'components/tutors';
 import Login from 'components/common/forms/login';
 import Register from 'components/common/forms/register';
+import Portal from 'components/portal';
 
 import userContext from 'context/userContext';
 
@@ -34,6 +35,11 @@ function App() {
               />
 
               <Route exact={true} path='/register' component={Register} />
+              <Route 
+                    exact={true} 
+                    path='/portal' 
+                    render={props => <Portal {...props} updateUser={setUser} />}  
+              />
             </Switch>
           </Router>
         </div>

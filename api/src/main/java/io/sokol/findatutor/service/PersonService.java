@@ -5,4 +5,5 @@ import io.sokol.findatutor.exceptions.UserDoesNotExistException;
 
 public interface PersonService {
     PersonDTO getPersonByEmail(String email) throws UserDoesNotExistException;
+    PersonDTO postWelcomingPerson(long id) throws UserDoesNotExistException;
 }

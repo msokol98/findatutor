@@ -95,7 +95,7 @@ const registrationForm = {
         errorMsg: "The given passwords do not match.",
     },
     submit: {
-        func: newUser => axios.post(`${apiHost}/register/tutor`, newUser),
+        func: newUser => axios.post(`${apiHost}/register/tutor`, {...newUser, memberSince: new Date()}),
         href: "/login"
     }
 }

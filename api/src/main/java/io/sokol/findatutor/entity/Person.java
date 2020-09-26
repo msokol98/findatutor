@@ -1,17 +1,11 @@
 package io.sokol.findatutor.entity;
 
-import org.hibernate.annotations.CreationTimestamp;
-
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 abstract public class Person {
-
-    private static final String DEFAULT_PROFILE_PICTURE_URI =
-            "https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg";
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,6 +18,8 @@ abstract public class Person {
     private String password;
     private String profilePictureURI;
     private LocalDate memberSince;
+
+    private boolean welcomeComplete;
 
     @ManyToOne
     private Location location;
@@ -39,6 +35,11 @@ abstract public class Person {
         this.location = location;
         this.profilePictureURI = profilePictureURI;
         this.memberSince = memberSince;
+        this.welcomeComplete = false;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getFirstName() {
@@ -90,11 +91,19 @@ abstract public class Person {
     }
 
     public String getProfilePictureURI() {
-        return profilePictureURI == null ? DEFAULT_PROFILE_PICTURE_URI : profilePictureURI;
+        return profilePictureURI;
     }
 
     public void setProfilePictureURI(String profilePictureURI) {
         this.profilePictureURI = profilePictureURI;
+    }
+
+    public boolean isWelcomeComplete() {
+        return welcomeComplete;
+    }
+
+    public void setWelcomeComplete(boolean welcomeComplete) {
+        this.welcomeComplete = welcomeComplete;
     }
 
     @Override

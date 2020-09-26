@@ -4,9 +4,7 @@ import io.sokol.findatutor.dto.PersonDTO;
 import io.sokol.findatutor.exceptions.UserDoesNotExistException;
 import io.sokol.findatutor.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class PersonController {
@@ -17,6 +15,11 @@ public class PersonController {
     @GetMapping("/api/persons")
     private PersonDTO getPersonByEmail(@RequestParam("email") String email) throws UserDoesNotExistException {
         return personService.getPersonByEmail(email);
+    }
+
+    @PostMapping("/api/persons/welcomed")
+    private PersonDTO postWelcomingPerson(@RequestParam("id") long id) throws UserDoesNotExistException {
+        return personService.postWelcomingPerson(id);
     }
 
 }

@@ -10,6 +10,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service("authService")
@@ -25,11 +26,15 @@ public class AuthServiceImpl implements AuthService {
     @Autowired
     private JwtService jwtService;
 
+    /*@Autowired
+    private PasswordEncoder passwordEncoder;*/
+
     @Override
     public ResponseEntity<?> authenticate(AuthRequest authRequest) {
         try {
             authManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword())
+                    new UsernamePasswordAuthenticationToken(authRequest.getEmail(),
+                                    /*passwordEncoder.encode(*/authRequest.getPassword())//)
             );
         } catch(BadCredentialsException e) {
             return ResponseEntity.badRequest().body("Given authentication credentials were not correct.");

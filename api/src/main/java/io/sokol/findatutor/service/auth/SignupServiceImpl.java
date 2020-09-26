@@ -5,6 +5,7 @@ import io.sokol.findatutor.exceptions.UserAlreadyExistsException;
 import io.sokol.findatutor.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -15,14 +16,19 @@ public class SignupServiceImpl implements SignupService {
     @Autowired
     private PersonRepository personRepo;
 
-    @Override
-    public ResponseEntity<?> registerUser(Person p) throws UserAlreadyExistsException {
-        Optional<Person> optP = personRepo.findByEmail(p.getEmail());
+    /*@Autowired
+    private PasswordEncoder passwordEncoder;*/
 
-        if(optP.isPresent())
+    @Override
+    public ResponseEntity<?> registerUser(Person person) throws UserAlreadyExistsException {
+        Optional<Person> optPerson = personRepo.findByEmail(person.getEmail());
+
+        if(optPerson.isPresent())
             throw new UserAlreadyExistsException();
 
-        personRepo.save(p);
+       ///person.setPassword(passwordEncoder.encode(person.getPassword()));
+
+        personRepo.save(person);
         return ResponseEntity.ok().build();
     }
 }

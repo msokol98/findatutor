@@ -52,7 +52,7 @@ class Form extends Component {
                     submit.callback && submit.callback(response);
                     this.setState({redirect: true})
                 })
-                .catch(error => this.setState({serverError: error.response.data.message}))
+                .catch(error => this.setState({serverError: error && error.response ? error.response.data.message : ""}))
 
         } else 
             this.setState({validationError: true})
