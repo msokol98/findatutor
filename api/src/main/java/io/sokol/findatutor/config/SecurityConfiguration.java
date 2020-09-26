@@ -57,11 +57,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable()
                 .authorizeRequests()
                     .antMatchers("/authenticate").permitAll()
-                    .antMatchers("/register/person").permitAll()
+                    .antMatchers("/register/**").permitAll()
                     .antMatchers("/persons/**").permitAll()
                     .antMatchers("/tutors/**").permitAll()
                     .antMatchers("/pupils/**").permitAll()
                     .antMatchers("/subjects/**").permitAll()
+                    .antMatchers("/api/**").permitAll()
                 .anyRequest().authenticated().and().
                 exceptionHandling().and().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);

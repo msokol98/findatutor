@@ -33,7 +33,7 @@ public class FakePersonCreator {
         List<Person> persons = new ArrayList<>();
         JSONParser jsonParser = new JSONParser();
 
-        try (FileReader reader = new FileReader("/home/mitchell/School/426/findatutor/api/src/main/resources/mock_people.json")) {
+        try (FileReader reader = new FileReader("/home/mitchell/Projects/findatutor/api/src/main/resources/mock_people.json")) {
             JSONObject obj = (JSONObject) jsonParser.parse(reader);
             JSONArray people = (JSONArray) obj.get("results");
 
@@ -59,7 +59,6 @@ public class FakePersonCreator {
         person.setFirstName(name.get("first").toString());
         person.setLastName(name.get("last").toString());
         JSONObject login = (JSONObject) personJSON.get("login");
-        person.setUserName(login.get("username").toString());
         person.setPassword(login.get("password").toString());
         person.setEmail(personJSON.get("email").toString());
         JSONObject picture = (JSONObject) personJSON.get("picture");

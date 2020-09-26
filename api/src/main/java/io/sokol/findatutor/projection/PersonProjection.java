@@ -18,8 +18,8 @@ public interface PersonProjection {
     @Value("#{target.getFirstName() + \" \" + target.getLastName()}")
     String getName();
 
-    String getUserName();
     String getEmail();
+
     String getProfilePictureURI();
 
     @Value("#{target.getClass().toString().substring(33)}")

@@ -31,6 +31,6 @@ public class FindatutorApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		new FakeDataCreator().run(personRepo, tutorRepo, reviewRepo, locationRepo, subjectRepo);
+		//new FakeDataCreator().run(personRepo, tutorRepo, reviewRepo, locationRepo, subjectRepo);
 	}
 }

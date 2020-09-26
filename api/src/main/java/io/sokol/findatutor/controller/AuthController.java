@@ -1,11 +1,9 @@
 package io.sokol.findatutor.controller;
 
 import io.sokol.findatutor.pojo.AuthRequest;
-import io.sokol.findatutor.pojo.AuthResponse;
-import io.sokol.findatutor.service.AuthService;
+import io.sokol.findatutor.service.auth.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,9 +19,5 @@ public class AuthController {
         return authService.authenticate(authRequest);
     }
 
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello, World";
-    }
 
 }

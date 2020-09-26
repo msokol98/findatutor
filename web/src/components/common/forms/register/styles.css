@@ -1,0 +1,29 @@
+.choose-role-container {
+    padding: 5%;
+}
+
+.role-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.role-container div {
+    margin: 15px 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .role-container {
+        flex-direction: row;
+    }
+
+    .role-container div {
+        margin: 0;
+    }
+
+    .choose-role-container {
+        padding: 3%;
+    }
+    
+}

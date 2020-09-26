@@ -1,6 +1,6 @@
 package io.sokol.findatutor.filter;
 
-import io.sokol.findatutor.service.JwtService;
+import io.sokol.findatutor.service.auth.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

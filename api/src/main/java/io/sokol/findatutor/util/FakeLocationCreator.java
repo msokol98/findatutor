@@ -20,7 +20,7 @@ public class FakeLocationCreator {
         List<Location> locations = new ArrayList<>();
         JSONParser jsonParser = new JSONParser();
 
-        try (FileReader reader = new FileReader("/home/mitchell/School/426/findatutor/api/src/main/resources/cities.json")) {
+        try (FileReader reader = new FileReader("/home/mitchell/Projects/findatutor/api/src/main/resources/cities.json")) {
             JSONObject obj = (JSONObject) jsonParser.parse(reader);
             JSONArray locationsJSON = (JSONArray) obj.get("data");
 

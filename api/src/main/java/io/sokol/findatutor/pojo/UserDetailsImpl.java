@@ -10,11 +10,11 @@ import java.util.Collection;
 
 public class UserDetailsImpl implements UserDetails {
 
-    private String userName;
+    private String email;
     private String password;
 
     public UserDetailsImpl(Person user) {
-        userName = user.getUserName();
+        email = user.getEmail();
         password = user.getPassword();
     }
 
@@ -32,7 +32,7 @@ public class UserDetailsImpl implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return email;
     }
 
     @Override

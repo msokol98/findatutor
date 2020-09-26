@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import 'bulma/css/bulma.css'
 import 'bulma-divider/dist/css/bulma-divider.min.css';
-import Options from 'components/general/options';
+import Options from 'components/options';
 
 const home = () => {
   return (
@@ -60,7 +60,7 @@ const home = () => {
                     <img src='clock.webp' alt='money' width='75'/>
                   </div>
                   <h3 className='title has-text-weight-light'>Quick Service</h3>
-                  <h5 className='subtitle has-text-grey has-text-weight-light'>Your car will be ready in no time.</h5>
+                  <h5 className='subtitle has-text-grey has-text-weight-light'>You'll find a tutor in no time.</h5>
                   <p>We have thousands of users across North American using our site. If you have a test upcoming, 
                      do not worry. We have a tutor near you eager to help.
                   </p>
@@ -192,7 +192,7 @@ const home = () => {
           <div style={{textAlign: 'left'}}>Website by Mitchell Sokol - Personal Project 2020
             <br/>Made with React, Bulma, and Java Spring Boot
             <br/>Deployed onto the web using an AWS EC2 RHEL instance
-            <br /><a href='https://github.com/msokol98' target='_blank'>See source code</a>
+            <br /><a href='https://github.com/msokol98'>See source code</a>
           </div>
 
         </div>

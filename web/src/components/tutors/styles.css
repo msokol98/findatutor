@@ -1,0 +1,53 @@
+.tutors-wrapper {
+    padding: 5%;
+}
+
+.tutor, .tutor-bio {
+    display: flex;
+    flex-direction: column;
+}
+
+.tutor {
+    margin: 25px 0px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.tutor-avatar {
+    width: 100%;
+}
+
+.tutor-bio {
+    margin: 20px;
+    padding: 20px 5px;
+}
+
+.tutor-bio > div > div {
+    margin: 20px 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .tutor, .tutor-bio {
+        flex-direction: row;
+    }
+
+    .tutor {
+        flex-direction: flex-start;
+        width: 75%;
+    }
+
+    .tutor-bio {
+        margin: 0;
+        padding: 5px 20px;
+    }
+
+    .tutor-bio-sec {
+        margin: 0 15px;
+    }
+
+    .tutor-avatar {
+        width: 23%;
+        display: flex;
+        align-items: center;
+    }
+}

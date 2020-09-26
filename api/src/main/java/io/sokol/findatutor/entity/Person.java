@@ -10,6 +10,9 @@ import java.time.LocalDateTime;
 @Inheritance(strategy = InheritanceType.JOINED)
 abstract public class Person {
 
+    private static final String DEFAULT_PROFILE_PICTURE_URI =
+            "https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg";
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -18,7 +21,6 @@ abstract public class Person {
     private String lastName;
 
     private String email;
-    private String userName;
     private String password;
     private String profilePictureURI;
     private LocalDate memberSince;
@@ -28,12 +30,11 @@ abstract public class Person {
 
     public Person() { }
 
-    public Person(String firstName, String lastName, String email, String userName,
+    public Person(String firstName, String lastName, String email,
                   String password, Location location, String profilePictureURI, LocalDate memberSince) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.userName = userName;
         this.password = password;
         this.location = location;
         this.profilePictureURI = profilePictureURI;
@@ -64,14 +65,6 @@ abstract public class Person {
         this.email = email;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -97,7 +90,7 @@ abstract public class Person {
     }
 
     public String getProfilePictureURI() {
-        return profilePictureURI;
+        return profilePictureURI == null ? DEFAULT_PROFILE_PICTURE_URI : profilePictureURI;
     }
 
     public void setProfilePictureURI(String profilePictureURI) {
@@ -111,7 +104,6 @@ abstract public class Person {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
-                ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", location=" + location +
                 '}';

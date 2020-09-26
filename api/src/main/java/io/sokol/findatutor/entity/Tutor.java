@@ -26,9 +26,9 @@ public class Tutor extends Person {
 
     public Tutor() {}
 
-    public Tutor(String firstName, String lastName, String email, String userName,
+    public Tutor(String firstName, String lastName, String email,
                  String password, Location location, String profilePictureURI, LocalDate memberSince) {
-        super(firstName, lastName, email, userName, password, location, profilePictureURI, memberSince);
+        super(firstName, lastName, email, password, location, profilePictureURI, memberSince);
     }
 
     public Set<Subject> getSubjects() {

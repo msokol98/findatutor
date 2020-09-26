@@ -11,9 +11,9 @@ public class Pupil extends Person {
 
     public Pupil() {}
 
-    public Pupil(String firstName, String lastName, String email, String userName,
+    public Pupil(String firstName, String lastName, String email,
                  String password, Location location, String profilePictureURI, LocalDate memberSince) {
-        super(firstName, lastName, email, userName, password, location, profilePictureURI, memberSince);
+        super(firstName, lastName, email, password, location, profilePictureURI, memberSince);
     }
 
     @OneToMany(mappedBy = "pupil")
